@@ -10,7 +10,6 @@ class GlowingButton extends StatefulWidget {
       this.color2 = Colors.greenAccent})
       : super(key: key);
   @override
-  // ignore: library_private_types_in_public_api
   _GlowingButtonState createState() => _GlowingButtonState();
 }
 

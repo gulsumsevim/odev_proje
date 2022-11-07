@@ -27,7 +27,7 @@ class Common {
     return list[Common.getRandomNumber(min: 0, max: list.length)];
   }
 
-  static findCombination(int value, int length) {
+  /* static findCombination(int value, int length) {
     List<int> combinations = [];
     int remainingCredit = value;
 
@@ -47,7 +47,7 @@ class Common {
     }
 
     return combinations;
-  }
+  }*/
 
   static fillWithRandomValues(List combinations, int max, int size) {
     for (var i = 0; i < size; i++) {

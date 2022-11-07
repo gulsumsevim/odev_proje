@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => sayacEkran(),
+                        builder: (context) => SayacEkran(),
                       ));
                 },
                 style: ElevatedButton.styleFrom(

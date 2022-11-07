@@ -66,25 +66,57 @@ class _HomePage extends State<buttonPage> {
                 ),
                 Expanded(
                   flex: 1,
-                  child: Container(
-                      padding: const EdgeInsets.only(left: 15, right: 10),
-                      width: 100,
-                      color: Colors.lightGreen,
-                      child: Row(
-                        children: <Widget>[
-                          Text(
-                            'TIMER : ',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          /*Text(
-                            secCounter.toString(),
-                            style: TextStyle(color: Colors.white),
-                          ),*/
-                        ],
-                      )),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                            padding: EdgeInsets.only(left: 15, right: 10),
+                            width: 800,
+                            color: blackLowOpacity,
+                            child: Row(
+                              children: <Widget>[
+                                Text(
+                                  'TIMER : ',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  secCounter.toString(),
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            )),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(40.0),
+                        child: Expanded(
+                          child: Container(
+                              margin: const EdgeInsets.only(left: 40),
+                              padding:
+                                  const EdgeInsets.only(left: 15, right: 15),
+                              width: 100,
+                              color: blackLowOpacity,
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    'SCOR : ',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  Text(
+                                    secCounter.toString(),
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Expanded(
                   flex: 1,

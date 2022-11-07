@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odevflutter/giris.dart';
 import 'oyunekran.dart';
 
 void main() {
@@ -14,6 +15,6 @@ class Odevproje extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'TOPLAMA',
         theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-        home: buttonPage());
+        home: HomePage());
   }
 }

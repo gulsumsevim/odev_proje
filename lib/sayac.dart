@@ -1,18 +1,19 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:odevflutter/oyunekran.dart';
 
 import 'sayacayar.dart';
 import 'package:flutter/material.dart';
 
-class sayacEkran extends StatefulWidget {
+class SayacEkran extends StatefulWidget {
   // This widget is the root of your application.
   @override
   // ignore: library_private_types_in_public_api
   _SayacEkranState createState() => _SayacEkranState();
 }
 
-class _SayacEkranState extends State<sayacEkran>
+class _SayacEkranState extends State<SayacEkran>
     with SingleTickerProviderStateMixin {
   Color _renk = Colors.green;
   int _startCounter = 5;
@@ -22,17 +23,17 @@ class _SayacEkranState extends State<sayacEkran>
   @override
   void initState() {
     super.initState();
-    this.runCounter();
+    runCounter();
   }
 
   void runCounter() {
-    _timer = Timer.periodic(Duration(seconds: 1), loadTimer);
+    _timer = Timer.periodic(const Duration(seconds: 1), loadTimer);
   }
 
   loadTimer(Timer timer) {
     setState(() {
-      this.loadGameWhenReady(timer);
-      this.continueLoader();
+      loadGameWhenReady(timer);
+      continueLoader();
     });
   }
 
@@ -42,13 +43,14 @@ class _SayacEkranState extends State<sayacEkran>
   }
 
   void loadGameWhenReady(Timer timer) {
-    if (_startCounter > 1) {
-      return;
+    if (_startCounter == 0) {
+      timer.cancel();
+      Navigator.of(context).pushAndRemoveUntil<void>(
+        MaterialPageRoute<void>(
+            builder: (BuildContext context) => const buttonPage()),
+        ModalRoute.withName('/'),
+      );
     }
-
-    timer.cancel();
-    Navigator.of(context)
-        .pushNamedAndRemoveUntil('', (Route<dynamic> route) => false);
   }
 
   @override
