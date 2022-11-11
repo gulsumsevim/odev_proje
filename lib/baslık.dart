@@ -11,6 +11,7 @@ Row headerInfo(int secCounter, Map<String, int> gameHistory) {
           color: blackLowOpacity,
           child: Row(
             children: <Widget>[
+              // ignore: prefer_const_constructors
               Text(
                 'TIMER : ',
                 style: TextStyle(

@@ -1,17 +1,19 @@
 // ignore: unused_import
-import 'dart:math';
+// ignore_for_file: unused_label
 
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:odevflutter/renk.dart';
 
+// ignore: camel_case_types
 class buttonPage extends StatefulWidget {
   const buttonPage({super.key});
 
   @override
-  State<buttonPage> createState() => _HomePage();
+  State<buttonPage> createState() => _ButtonPage();
 }
 
-class _HomePage extends State<buttonPage> {
+class _ButtonPage extends State<buttonPage> {
   String randomNumber = 'X';
 
   var colors = [
@@ -70,13 +72,15 @@ class _HomePage extends State<buttonPage> {
                     children: [
                       Expanded(
                         child: Container(
-                            padding: EdgeInsets.only(left: 15, right: 10),
+                            padding: const EdgeInsets.only(left: 15, right: 10),
                             width: 800,
                             color: blackLowOpacity,
                             child: Row(
                               children: <Widget>[
+                                // ignore: prefer_const_constructors
                                 Text(
                                   'TIMER : ',
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                     color: Colors.white,
                                   ),
@@ -84,13 +88,13 @@ class _HomePage extends State<buttonPage> {
                                 ),
                                 Text(
                                   secCounter.toString(),
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ],
                             )),
                       ),
                       Padding(
-                        padding: EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(40.0),
                         child: Expanded(
                           child: Container(
                               margin: const EdgeInsets.only(left: 40),
@@ -100,16 +104,17 @@ class _HomePage extends State<buttonPage> {
                               color: blackLowOpacity,
                               child: Row(
                                 children: <Widget>[
+                                  // ignore: prefer_const_constructors
                                   Text(
                                     'SCOR : ',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
                                   Text(
                                     secCounter.toString(),
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                 ],
                               )),
