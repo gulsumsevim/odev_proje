@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class GlowingButton extends StatefulWidget {
@@ -35,7 +37,7 @@ class _GlowingButtonState extends State<GlowingButton> {
       },
       child: AnimatedContainer(
         transform: Matrix4.identity()..scale(scale),
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         height: 48,
         width: 160,
         decoration: BoxDecoration(
@@ -52,25 +54,25 @@ class _GlowingButtonState extends State<GlowingButton> {
                       color: widget.color1.withOpacity(0.6),
                       spreadRadius: 1,
                       blurRadius: 16,
-                      offset: Offset(-8, 0),
+                      offset: const Offset(-8, 0),
                     ),
                     BoxShadow(
                       color: widget.color2.withOpacity(0.6),
                       spreadRadius: 1,
                       blurRadius: 16,
-                      offset: Offset(8, 0),
+                      offset: const Offset(8, 0),
                     ),
                     BoxShadow(
                       color: widget.color1.withOpacity(0.2),
                       spreadRadius: 16,
                       blurRadius: 32,
-                      offset: Offset(-8, 0),
+                      offset: const Offset(-8, 0),
                     ),
                     BoxShadow(
                       color: widget.color2.withOpacity(0.2),
                       spreadRadius: 16,
                       blurRadius: 32,
-                      offset: Offset(8, 0),
+                      offset: const Offset(8, 0),
                     )
                   ]
                 : []),
@@ -83,7 +85,7 @@ class _GlowingButtonState extends State<GlowingButton> {
             ),
             Text(
               glowing ? "Glowing" : "Dimmed",
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w600),

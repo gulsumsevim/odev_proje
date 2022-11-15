@@ -11,8 +11,8 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   // ignore: unused_element
-  _navigatetohome() async {
-    await Future.delayed(const Duration(milliseconds: 1500), () {});
+  _Splash() async {
+    const Duration(milliseconds: 1500);
     // ignore: use_build_context_synchronously
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => HomePage()));

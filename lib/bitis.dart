@@ -16,13 +16,14 @@ Future<void> showSummary(
               children: <Widget>[
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: <
                     Widget>[
+                  // ignore: prefer_const_constructors
                   Text(
                     'Score: ',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   ),
                   Text(
                     gameHistory['score'].toString(),
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   ),
                 ]),
                 Row(

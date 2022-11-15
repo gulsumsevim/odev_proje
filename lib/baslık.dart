@@ -14,14 +14,14 @@ Row headerInfo(int secCounter, Map<String, int> gameHistory) {
               // ignore: prefer_const_constructors
               Text(
                 'TIMER : ',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
               Text(
                 secCounter.toString(),
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
             ],
           )),
@@ -32,16 +32,17 @@ Row headerInfo(int secCounter, Map<String, int> gameHistory) {
           color: blackLowOpacity,
           child: Row(
             children: <Widget>[
+              // ignore: prefer_const_constructors
               Text(
                 'SCORE : ',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
               Text(
                 gameHistory['score'].toString(),
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
             ],
           ))

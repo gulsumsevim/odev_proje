@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'renk.dart';
 
-class denemepAGE extends StatelessWidget {
+class denemepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_typing_uninitialized_variables
     var secCounter;
+    // ignore: prefer_typing_uninitialized_variables
     var gameHistory;
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: double.infinity,
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -25,7 +27,7 @@ class denemepAGE extends StatelessWidget {
                         color: blackLowOpacity,
                         child: Row(
                           children: <Widget>[
-                            Text(
+                            const Text(
                               'TIMER : ',
                               style: TextStyle(
                                 color: Colors.white,
@@ -34,7 +36,7 @@ class denemepAGE extends StatelessWidget {
                             ),
                             Text(
                               secCounter.toString(),
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                             ),
                           ],
                         )),
@@ -45,7 +47,7 @@ class denemepAGE extends StatelessWidget {
                         color: blackLowOpacity,
                         child: Row(
                           children: <Widget>[
-                            Text(
+                            const Text(
                               'SCORE : ',
                               style: TextStyle(
                                 color: Colors.white,
@@ -54,7 +56,7 @@ class denemepAGE extends StatelessWidget {
                             ),
                             Text(
                               gameHistory[''].toString(),
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                             ),
                           ],
                         ))

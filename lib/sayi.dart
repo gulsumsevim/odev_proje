@@ -17,14 +17,14 @@ Widget numberBlock(
       child: Container(
         width: 120,
         height: 120,
-        alignment: Alignment(0.0, 0.0),
+        alignment: const Alignment(0.0, 0.0),
         decoration: BoxDecoration(
             color: bgColor,
             border: Border.all(color: Colors.white, width: 5),
             borderRadius: BorderRadius.circular(10)),
         child: Text(
           value.toString(),
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),
         ),
       ),
